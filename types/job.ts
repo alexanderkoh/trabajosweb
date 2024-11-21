@@ -1,5 +1,4 @@
-export interface JobType {
-  id?: number
+export interface BaseJobType {
   title: string
   company: string
   location: string
@@ -12,4 +11,16 @@ export interface JobType {
   requirements: string[]
   benefits: string[]
   contactEmail: string
+}
+
+export interface JobType extends BaseJobType {
+  id?: number
+  createdAt?: Date
+  updatedAt?: Date
+}
+
+export interface JobWithId extends BaseJobType {
+  id: number
+  createdAt: Date
+  updatedAt: Date
 } 

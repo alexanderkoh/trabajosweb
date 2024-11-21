@@ -5,10 +5,10 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useRouter } from 'next/navigation';
-import { JobType } from '@/types/job'
+import { JobWithId } from '@/types/job'
 
 interface JobCardProps {
-  job: Omit<JobType, 'id'> & { id: number }
+  job: JobWithId
 }
 
 export function JobCard({ job }: JobCardProps) {

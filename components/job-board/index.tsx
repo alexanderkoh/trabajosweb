@@ -1,13 +1,13 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { JobType } from '@/types/job';
+import { JobWithId } from '@/types/job';
 import { Header } from './header';
 import { SearchFilters } from './search-filters';
 import { JobCard } from './job-card';
 
 export default function JobBoard() {
-  const [jobs, setJobs] = useState<JobType[]>([]);
+  const [jobs, setJobs] = useState<JobWithId[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
